@@ -1,22 +1,10 @@
-interface ButtonProps {
-	text: string
-}
+import { Widget } from "./components/Widget"
 
-function Button(props: ButtonProps){
-	return(
-      <button>{props.text}</button>
-  )
-
-}
-
-function App() {
+export function App() {
   return (
-    <>
-      <Button text="Botão 1"/>
-      <Button text="Botão 2"/>
-      <Button text="Botão 3"/>
-    </>
+      <>
+        <Widget></Widget>
+      </>
   )
 }
 
-export default App
