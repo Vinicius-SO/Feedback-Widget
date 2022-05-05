@@ -9,11 +9,11 @@ export function FeedbackTypeStep({onFeedbacktypeChnaged}:FeedbackTypeStepProps){
     return(
         <>
             <header>
-            <span className="text-xl leanding-6">Deixe seu Feedback</span>
-            <CloseButton></CloseButton>
+                <span className="text-xl leanding-6">Deixe seu Feedback</span>
+                <CloseButton></CloseButton>
             </header>
+
             <div className='flex py-8 gap-2 w-full'>
-                    
             {Object.entries(feedbackTypes).map(([key,value])=>{
                 return(
                     <button
