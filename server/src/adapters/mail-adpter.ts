@@ -4,5 +4,5 @@ export interface SendMailData{
 }
 
 export interface MailAdapter {
-    sendMail: (mail:SendMailData) => void
+    sendMail: (mail:SendMailData) => Promise<void>
 }
