@@ -1,4 +1,4 @@
-import react from 'react'
+import React from 'react'
 import { StatusBar } from 'expo-status-bar';
 import {  View } from 'react-native';
 import AppLoading from 'expo-app-loading';
@@ -8,7 +8,7 @@ import { useFonts,
 } from '@expo-google-fonts/inter';
 
 import { theme } from './src/theme';
-import { Widget } from './src/components/Widget';
+import { Widget } from './src/components/Widget' ;
 
 export default function App() {
   const [fontsLoaded] = useFonts({
