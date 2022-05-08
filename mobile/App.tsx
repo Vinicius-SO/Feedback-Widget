@@ -3,8 +3,7 @@ import React  from 'react'
 
 import { StatusBar } from 'expo-status-bar';
 import {  View } from 'react-native';
-import AppLoading from 'expo-app-loading';
-import { useFonts,
+import * as SplashScreen from 'expo-splash-screen';import { useFonts,
    Inter_400Regular,
     Inter_500Medium
 } from '@expo-google-fonts/inter';
@@ -13,14 +12,19 @@ import { theme } from './src/theme';
 import Widget from './src/components/Widget' ;
 
 export default function App() {
-  const  [fontsLoaded] = useFonts({
-   Inter_400Regular,
-   Inter_500Medium
+  SplashScreen.preventAutoHideAsync();
+
+  const [fontsLoaded] = useFonts({
+    Inter_400Regular,
+    Inter_500Medium,
   });
 
   if (!fontsLoaded) {
-    return <AppLoading />;
+    return null;
   }
+
+  SplashScreen.hideAsync();
+
   return (
     <View style={{
       flex: 1,
